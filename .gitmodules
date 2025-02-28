@@ -1,7 +1,0 @@
-[submodule "deps/Pangolin"]
-	path = deps/Pangolin
-	url = https://github.com/stevenlovegrove/Pangolin.git
-[submodule "deps/ORB_SLAM3"]
-	path = deps/ORB_SLAM3
-	url = https://github.com/UZ-SLAMLab/ORB_SLAM3.git
-	branch = c++14_comp

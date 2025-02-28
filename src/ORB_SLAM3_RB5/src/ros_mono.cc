@@ -60,7 +60,7 @@ public:
 
     ImageGrabber(ORB_SLAM3::System *pSLAM) : Node("Mono"){
     image_sub_ = this->create_subscription<sensor_msgs::msg::Image>(
-    "/camera/image_raw", 10, std::bind(&ImageGrabber::GrabImage, this, _1));
+    "/camera_main/image_raw", 10, std::bind(&ImageGrabber::GrabImage, this, _1));
 
     pose_pub_ = this->create_publisher<geometry_msgs::msg::PoseStamped>("/camera_pose", 10);
 
@@ -68,7 +68,7 @@ public:
     
     mpSLAM = pSLAM;
 
-    };sla
+    };
 
 
 private:
