@@ -20,7 +20,7 @@ make images
 > We have confirmed that the build will succeed with a `swap` partition of 6GB but it may be possible to use a smaller size.
 
 ## Usage
-## Running Monocular ORB_SLAM3
+### Running Monocular ORB_SLAM3
 On host
 ```bash
 docker run --network host -it --rm --name orb_slam3 orb_slam3:humble
@@ -31,10 +31,10 @@ In orb_slam3 container
 ros2 run orb_slam3_rb5_ros2 Mono /root/ORB_SLAM3/Vocabulary/ORBvoc.txt /root/ORB_SLAM3/Examples_old/Monocular/EuRoC.yaml
 ```
 
-## Running Laptop Camera Node
+### Running Laptop Camera Node
 On host
 ```bash
-docker run --network host --device /dev/video0 --device /dev/video1 --device /dev/media0 -v /run/udev:/run/udev:ro -it --rm --name ros2_humble ros2:humble
+docker run --network host --device /dev/video0 --device /dev/video1 --device /dev/media0 -v /run/udev:/run/udev:ro -it --rm --name ros2_humble ros2-base:humble
 ```
 In ros2 container
 ```bash
